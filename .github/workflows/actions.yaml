@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu_latest
     steps:
       - name: vanakkam
-        run: echo "vanakkam"
+        run: echo "vanakkam Nalin"
         shell: bash
