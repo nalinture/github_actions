@@ -9,7 +9,7 @@ on:
 jobs:
    hello:
     runs_on: ubuntu_latest
-    steps:
+    steps:lig
       - name: vanakkam
         run: echo "vanakkam"
         shell: bash
