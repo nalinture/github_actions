@@ -5,10 +5,9 @@ on:
     branches:
       - main
      
-     
 jobs:
    hello:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: vanakkam
         run: echo "vanakkam Nalin"
