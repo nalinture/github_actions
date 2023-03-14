@@ -9,5 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: dump-context
-        run: echo '${{ toJSON(github.event) }}' | jq 'id, number'
-        shell: bash
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash  
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ (github.event.issue.number) }}
+          id: ${{ (github.event.id) }}
+          body: |
+            This is a multi-line test comment
+            - With GitHub **Markdown** :sparkles:
+            - Created by [create-or-update-comment]
